@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Root</title>
+</head>
+
+<body>
+    <div class="container">
+        <h3 class="router">GET /videos</h3> <h4>&nbsp; - Lista de todos os videos</h4>
+    </div>
+    <div class="container">
+        <h3 class="router">PUT /videos</h3> <h4>&nbsp; - Inserir um video</h4> 
+    </div>
+    <div class="container">
+        <h3 class="router">GET /videos/byuploader/:uploader</h3> <h4>&nbsp; - Listar videos por uploader</h4> 
+    </div>
+    <div class="container">
+        <h3 class="router">POST /videos/likes/:video_id/:likes</h3> <h4>&nbsp; - Adicionar Likes a um video</h4> 
+    </div>
+    <div class="container">
+        <h3 class="router">GET /videos/byid/:id</h3> <h4>&nbsp; - Mostrar informacoes sobre um video</h4> 
+    </div>
+    <div class="container">
+        <h3 class="router">GET /videos/bytags/</h3> <h4>&nbsp; - Mostrar videos cujo tenha determinadas tags</h4> 
+    </div>
+    <div class="container">
+        <h3 class="router">DELETE /videos/:id</h3> <h4>&nbsp; - Deleta um video</h4> 
+    </div>
+    <div class="container">
+        <h3 class="router">POST /videos/dislikes/:video_id/:dislikes</h3> <h4>&nbsp; - Adicionar Dislikes a um video</h4> 
+    </div>
+    <div class="container">
+        <h3 class="router">POST /videos/comments/:id</h3> <h4>&nbsp; - Adicionar Comentarios a um video</h4> 
+    </div>
+    <div class="container">
+        <h3 class="router">GET /videos/mostlikes</h3> <h4>&nbsp; - Listar videos por mais likes</h4> 
+    </div>
+</body>
+<style>
+    .container{
+        display: flex;
+        border-bottom: 1px solid burlywood;
+        
+    }
+    .container .router{
+        color: black;
+
+    }
+</style>
+</html>
