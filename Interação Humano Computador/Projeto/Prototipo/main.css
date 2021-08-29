@@ -1,0 +1,392 @@
+body {
+  margin: 0;
+}
+
+.btn-menu {
+  color: white;
+  text-decoration: none;
+  padding: 20px;
+  border-right: white 1px solid;
+}
+
+.btn {
+  color: white;
+  text-decoration: none;
+}
+
+.header {
+  background-image: url("img/image.jpeg");
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 1360px;
+}
+
+.header .logo-large {
+  background-image: url("img/logo-large.png");
+}
+
+.header .logo-large .titulo {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  top: 300px;
+  font-size: 40px;
+  font-family: Cursive;
+}
+
+.header .menu {
+  background-color: rgba(0, 0, 0, 0.8);
+  height: 60px;
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  margin: 0;
+  grid-column: 50% 50%;
+}
+
+.header .menu .left {
+  -ms-grid-column: 1;
+      grid-column-start: 1;
+  -ms-grid-column-align: left;
+      justify-self: left;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.header .menu .right {
+  -ms-grid-column: 2;
+      grid-column-start: 2;
+  -ms-grid-column-align: right;
+      justify-self: right;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.header .menu .right .linguagem {
+  padding-right: 30px;
+  width: 25px;
+}
+
+.no-background {
+  background-image: none;
+  height: 100px;
+}
+
+.content {
+  /* Change styles for span and cancel button on extra small screens */
+}
+
+.content .material-title,
+.content .tickets-title,
+.content .estados-title,
+.content .precos-title,
+.content .informations-title {
+  text-align: center;
+  color: #68686d;
+  font-family: Cursive;
+}
+
+.content .informations {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.content .informations .information {
+  text-decoration: none;
+  width: 350px;
+  margin: 25px;
+  display: inline-block;
+}
+
+.content .informations .information .information-img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 150px;
+}
+
+.content .informations .information .information-title {
+  text-align: center;
+  font-family: Cursive;
+  color: #ffb414;
+}
+
+.content .informations .information .information-text {
+  color: #3e4243;
+}
+
+.content .precos {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.content * {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.content .columns {
+  width: 450px;
+  padding: 20px;
+}
+
+.content img {
+  width: 400px;
+}
+
+.content .price {
+  list-style-type: none;
+  border: 1px solid #eee;
+  margin: 0;
+  padding: 0;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.content .price:hover {
+  -webkit-box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.2);
+}
+
+.content .price .header {
+  background-color: #111;
+  color: white;
+  font-size: 25px;
+}
+
+.content .price li {
+  border-bottom: 1px solid #eee;
+  padding: 20px;
+  text-align: center;
+}
+
+.content .price .grey {
+  background-color: #eee;
+  font-size: 20px;
+}
+
+.content .button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 10px 25px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+@media only screen and (max-width: 600px) {
+  .content .columns {
+    width: 100%;
+  }
+}
+
+.content .estados {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+.content .estados img {
+  width: 400px;
+}
+
+.content .tickets {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.content .tickets .ticket {
+  margin: 20px;
+  padding: 10px;
+  text-decoration: none;
+  color: black;
+  border: solid black 1px;
+  text-align: center;
+}
+
+.content .tickets .ticket .ticket-qrcode {
+  width: 200px;
+}
+
+.content .tickets .revogado,
+.content .tickets .waiting {
+  border: lightcoral solid 3px;
+}
+
+.content .tickets .paid {
+  border: lightgreen solid 3px;
+}
+
+.content .form {
+  margin: 30px;
+}
+
+.content .ticket-status {
+  font-size: 25px;
+}
+
+.content .material-title {
+  text-align: left;
+}
+
+.content .ticket-materiais {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+}
+
+.content .ticket-materiais .material {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 10px;
+}
+
+.content .ticket-materiais .btn-submit {
+  width: 100px;
+  margin: 15px;
+}
+
+.content form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border: 3px solid #f1f1f1;
+  margin-bottom: 100px;
+}
+
+.content input[type=text],
+.content input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.content button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+.content button:hover {
+  opacity: 0.8;
+}
+
+.content .form-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.content .cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+}
+
+.content .container {
+  width: 500px;
+  padding: 16px;
+}
+
+.content span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+@media screen and (max-width: 300px) {
+  .content span.psw {
+    display: block;
+    float: none;
+  }
+  .content .cancelbtn {
+    width: 100%;
+  }
+}
+
+.footer {
+  background-color: #3a353c;
+  height: auto;
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  margin: 0;
+  grid-column: 50% 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.footer .contactos {
+  color: grey;
+  font-size: 16px;
+  font-family: Cursive;
+}
+
+.footer .contactos .contactos-title {
+  margin-left: 45px;
+}
+
+.footer .contactos .lista-contactos .contacto {
+  margin: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.footer .contactos .lista-contactos .contacto img {
+  width: 32px;
+  height: 30px;
+}
+/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,17 @@
+Update Serie Ranting
+db.series.updateOne({nome:'A aventura da universidade da madeira'},{ $set: { rating: "10" }})
+
+Add temporada to serie
+db.series.updateOne({nome:'A aventura da universidade da madeira'},{ $addToSet: { temporadas: 10 }})
+
+Remove temporada from serie
+db.series.updateOne({nome:'A aventura da universidade da madeira'},{ $pull: { temporadas: 10 }})
+
+Add Autor to seasons
+db.temporada.updateOne({temporada_id:1},{ $addToSet: { ators: 2 }})
+
+Remove Autor to seasons
+db.temporada.updateOne({temporada_id:1},{ $pull: { ators: 10 }})
+
+Edit name of episode
+db.temporada.updateOne({nome:'Passear na aula do marcao'},{ $set: { nome: 'Passear na aula do magno' }})

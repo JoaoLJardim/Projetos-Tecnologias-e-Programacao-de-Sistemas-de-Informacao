@@ -1,0 +1,30 @@
+<h2>Series Listing</h2>
+<br>
+<h5 style="text-align: center">{{error}}</h5>
+<br>
+<table class="table" ng-if="series.length>0">
+    <tr style="text-align: center">
+        <th>Serie_id</th>
+        <th>Nome</th>
+        <th>Release Date</th>
+        <th>Rating</th>
+        <th>Temporadas</th>
+        <th>Ações</th>
+    </tr>
+
+    <tr ng-repeat="serie in series" style="text-align: center">
+        <td>{{serie.serie_id}}</td>
+        <td>{{serie.nome}}</td>
+        <td>{{serie.data}}</td>
+        <td>{{serie.rating}}</td>
+        <td>{{serie.temporada_id}}</td>
+        <td>
+            <a  class="btn btn-success" ui-sref="seriesInfo({id:serie._id})"  ng-hide="serie.diretores.length < 1">Diretores </a> <span ng-hide="serie.diretores.length < 1">|</span>
+            <a ui-sref="serieEdit({id:serie._id})" class="btn btn-primary">Edit</a> |
+            <a ng-click="deleteSerie(serie._id)" class="btn btn-warning">Delete</a>
+        </td>
+    </tr>
+</table>
+<div ng-if="series.length==0">
+    Nenhuma Serie Listada!!
+</div>

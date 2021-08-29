@@ -1,0 +1,37 @@
+<h2 ng-show="episodio._id!=null">Edit Episodio</h2>
+<h2 ng-hide="episodio._id!=null">Create Episodio</h2>
+<hr>
+<h5 style="text-align: center">{{error}}</h5>
+<br>
+<form name="episodioForm" ng-submit="saveepisodioData(episodio)" novalidate class="form-horizontal">
+    <div class="form-group">
+        <label class="col-md-2">Nome</label>
+        <div class="col-md-10">
+            <input type="text" ng-model="episodio.nome" name="nome" ng-required="true" class="form-control"/>
+            <p ng-show="episodioForm.nome.$error.required && (episodioForm.$submitted)" class="text-danger">Please Enter Name</p>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-md-2">Temporada</label>
+        <div class="col-md-10">
+            <select ng-model="episodio.temporada_id" name="temporada_id" style="width: 100%">
+                <option ng-repeat="x in temporadas" ng-value="x.temporada_id">{{"("+x.temporada_id+") - "+ x.nome  }}</option>
+            </select>
+            <p ng-show="episodioForm.temporada_id.$error.required && (episodioForm.$submitted)" class="text-danger">Insere a temporada.</p>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-md-2">Numero do Episodio</label>
+        <div class="col-md-10">
+            <input type="number" ng-model="episodio.episodio_numero" name="episodio_numero" ng-required="true" class="form-control"/>
+            <p ng-show="episodioForm.episodio_numero.$error.required && (episodioForm.$submitted)" class="text-danger">Please Enter Contact No.</p>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" value="Update" class="btn btn-primary" ng-show="episodio._id!=null"/>
+            <input type="submit" value="Save" class="btn btn-primary" ng-hide="episodio._id!=null"/>
+            <a ui-sref="episodiosList" class="btn btn-warning">Cancel</a>
+        </div>
+    </div>
+</form>

@@ -1,0 +1,119 @@
+.aluno-img {
+  border: grey 2px solid;
+  width: 250px;
+}
+
+.nav-item-left {
+  margin: 10px;
+}
+
+.nav-item-left a {
+  color: black;
+}
+
+table,
+th,
+td {
+  border: 1px solid black;
+}
+
+table {
+  width: 100%;
+}
+
+table th {
+  background-color: lightgrey;
+}
+
+table td a {
+  color: black;
+}
+
+table tr,
+table th {
+  text-align: center;
+}
+
+.btn-delete {
+  color: black;
+  background: none;
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+.btn-delete:hover {
+  text-decoration: underline;
+}
+
+.link-button {
+  color: black;
+}
+
+.message {
+  text-align: center;
+  width: 100%;
+  background-color: lightgreen;
+}
+
+.message-error {
+  text-align: center;
+  width: 100%;
+  background-color: lightcoral;
+}
+
+.update-btn {
+  display: flex;
+}
+
+.update-btn a {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.form {
+  text-align: center;
+  margin: 0px 250px 0px 250px;
+}
+
+.form .form-submit {
+  color: black;
+  background: lightgrey;
+  border: lightgrey 1px solid;
+  margin: 0;
+  padding: 0;
+}
+
+.form .form-submit:hover {
+  text-decoration: underline;
+}
+
+.form input[type=submit] {
+  width: 100%;
+  background-color: lightblue;
+  color: black;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.form input[type=submit]:hover {
+  background-color: lightskyblue;
+}
+
+.form input[type=password],
+.form input[type=number],
+.form input[type=text],
+.form textarea,
+.form select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+

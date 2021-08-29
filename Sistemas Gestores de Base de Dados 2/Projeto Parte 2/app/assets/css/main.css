@@ -1,0 +1,7 @@
+.deleteBtn {
+    color: #007bff;
+}
+
+.deleteBtn:hover {
+    text-underline: #007bff;
+}

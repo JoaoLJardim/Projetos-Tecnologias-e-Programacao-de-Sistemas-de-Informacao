@@ -1,0 +1,35 @@
+<h2 ng-show="atore._id!=null">Edit Ator</h2>
+<h2 ng-hide="atore._id!=null">Create Ator</h2>
+<hr>
+<h5 style="text-align: center">{{error}}</h5>
+<br>
+<form name="atoreForm" ng-submit="saveAtoreData(atore)" novalidate class="form-horizontal">
+    <div class="form-group">
+        <label class="col-md-2">Nome</label>
+        <div class="col-md-10">
+            <input type="text" ng-model="atore.nome" name="nome" ng-required="true" class="form-control"/>
+            <p ng-show="atoreForm.nome.$error.required && (atoreForm.$submitted)" class="text-danger">Insere o nome do Ator.</p>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-md-2">Idade</label>
+        <div class="col-md-10">
+            <input type="number" ng-model="atore.idade" name="idade" ng-required="true" class="form-control"/>
+            <p ng-show="atoreForm.idade.$error.required && (atoreForm.$submitted)" class="text-danger">Insere a idade do Ator.</p>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-md-2">Telefone</label>
+        <div class="col-md-10">
+            <input type="number" ng-model="atore.telefone" name="telefone" ng-required="true" class="form-control"/>
+            <p ng-show="atoreForm.telefone.$error.required && (atoreForm.$submitted)" class="text-danger">Insere o numero de telefone do Ator.</p>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" value="Update" class="btn btn-primary" ng-show="atore._id!=null"/>
+            <input type="submit" value="Save" class="btn btn-primary" ng-hide="atore._id!=null"/>
+            <a ui-sref="atoreList" class="btn btn-warning">Cancel</a>
+        </div>
+    </div>
+</form>

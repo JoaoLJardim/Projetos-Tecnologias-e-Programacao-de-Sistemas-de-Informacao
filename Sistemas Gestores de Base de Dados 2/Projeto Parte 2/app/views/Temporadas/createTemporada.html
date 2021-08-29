@@ -1,0 +1,36 @@
+<h2 ng-show="temporada._id!=null">Edit Temporada</h2>
+<h2 ng-hide="temporada._id!=null">Create Temporada</h2>
+<hr>
+<h5 style="text-align: center">{{error}}</h5>
+<br>
+<form name="temporadaForm" ng-submit="saveTemporadaData(temporada)" novalidate class="form-horizontal">
+    <div class="form-group">
+        <label class="col-md-2">Nome</label>
+        <div class="col-md-10">
+            <input type="text" ng-model="temporada.nome" name="nome" ng-required="true" class="form-control"/>
+            <p ng-show="temporadaForm.nome.$error.required && (temporadaForm.$submitted)" class="text-danger">Insere o nome da Temporada</p>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-md-2">Atores</label>
+        <div class="col-md-10">
+            <select ng-model="temporada.ator_id" name="ator_id" multiple style="width: 100%" ng-required="true">
+                <option ng-repeat="x in atores" ng-value="x.ator_id">{{x.nome}}</option>
+            </select>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-md-2">Temporada</label>
+        <div class="col-md-10">
+            <input type="number" ng-model="temporada.temporada_numero" name="temporada_numero" ng-required="true" class="form-control"/>
+            <p ng-show="temporadaForm.temporada_numero.$error.required && (temporadaForm.$submitted || temporadaForm.temporada_numero.$dirty)" class="text-danger">Insira o numero da temporada.</p>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" value="Update" class="btn btn-primary" ng-show="temporada._id!=null"/>
+            <input type="submit" value="Save" class="btn btn-primary" ng-hide="temporada._id!=null"/>
+            <a ui-sref="temporadaList" class="btn btn-warning">Cancel</a>
+        </div>
+    </div>
+</form>

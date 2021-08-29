@@ -1,0 +1,28 @@
+<h2>Atores Listing</h2>
+<br>
+<h5 style="text-align: center">{{error}}</h5>
+<br>
+<table class="table" ng-if="atores.length>0">
+    <tr style="text-align: center">
+        <th>Ator_id</th>
+        <th>Nome</th>
+        <th>Idade</th>
+        <th>Telefone</th>
+        <th>Ações</th>
+    </tr>
+
+    <tr ng-repeat="ator in atores" style="text-align: center">
+        <td>{{ator.ator_id}}</td>
+        <td>{{ator.nome}}</td>
+        <td>{{ator.idade}}</td>
+        <td>{{ator.telefone}}</td>
+        <td>
+            <a ui-sref="atoreEdit({id:atore._id})"  class="btn btn-primary">Edit</a> |
+            <a ng-click="deleteAtore(ator._id)" class="btn btn-warning">Delete</a>
+        </td>
+    </tr>
+</table>
+
+<div ng-if="atores.length==0">
+    Nenhum Ator Listado!!
+</div>

@@ -1,0 +1,46 @@
+use series;
+
+db.series.insertMany([
+{"serie_id":1,"nome":"A aventura da ribeira brava","data": ISODate("2016-11-23"),"rating":2,"temporada_id":[1,2]},
+{"serie_id":2,"nome":"A aventura da universidade da madeira","data": ISODate("2011-10-22"),"rating":5,"temporada_id":[3]},
+{"serie_id":3,"nome":"A aventura do claudio","data": ISODate("2001-12-25"),"rating":7,"temporada_id":[4]},
+{"serie_id":4,"nome":"A aventura do squad","data": ISODate("2019-11-22"),"rating":9,"temporada_id":[5]},
+{"serie_id":5,"nome":"Stress das aulas","data": ISODate("2008-04-10"),"rating":12,"temporada_id":[6]}
+])
+
+db.temporadas.insertMany([
+{"temporada_id":1,"ator_id":[1,2,3],"temporada_numero":1},
+{"temporada_id":2,"ator_id":[1,2,3],"temporada_numero":2},
+{"temporada_id":3,"ator_id":[4,5,6],"temporada_numero":1},
+{"temporada_id":4,"ator_id":[1,2,5],"temporada_numero":1},
+{"temporada_id":5,"ator_id":[1,2,4,7],"temporada_numero":1},
+{"temporada_id":6,"ator_id":[4,5,6],"temporada_numero":1}
+])
+
+db.episodios.insertMany([
+{"nome":"conhecer a Acin","temporada_id":1, "episodio_numero":1},
+{"nome":"conhecer as instalações da acin","temporada_id":2,"episodio_numero":1},
+{"nome":"conhecer a padaria","temporada_id":2,"episodio_numero":2},
+{"nome":"Conhecer as salas","temporada_id":3, "episodio_numero":1},
+{"nome":"conhecer as pessoas da universidade","temporada_id":3, "episodio_numero":2},
+{"nome":"Fazer as rondas","temporada_id":3, "episodio_numero":3},
+{"nome":"Conhecer raparigas","temporada_id":4, "episodio_numero":1},
+{"nome":"Ir ao Mac","temporada_id":4, "episodio_numero":2},
+{"nome":"Chumbar ao codigo","temporada_id":4, "episodio_numero":3},
+{"nome":"Rondas dia e noite","temporada_id":5, "episodio_numero":1},
+{"nome":"Passear na aula do marcao","temporada_id":5, "episodio_numero":2},
+{"nome":"Passear na aula de SGBD","temporada_id":5, "episodio_numero":3},
+{"nome":"Fazer a frequencia","temporada_id":6, "episodio_numero":1},
+{"nome":"Fazer o projecto","temporada_id":6, "episodio_numero":2},
+{"nome":"Apresentar o projecto","temporada_id":6, "episodio_numero":3}
+])
+
+db.atores.insertMany([
+{"nome":"God carlao","ator_id":1,"idade":26,"telefone":916969691},
+{"nome":"God taliba","ator_id":2,"idade":20,"telefone":924206910},
+{"nome":"Artur","ator_id":3,"idade":25,"telefone":921231230},
+{"nome":"Claudio","ator_id":4,"idade":19,"telefone":914206922},
+{"nome":"Matilde","ator_id":5,"idade":23,"telefone":923412322},
+{"nome":"Edgar","ator_id":6,"idade":22,"telefone":914204209},
+{"nome":"Magno andrade","ator_id":7,"idade":24,"telefone":910070690}
+])

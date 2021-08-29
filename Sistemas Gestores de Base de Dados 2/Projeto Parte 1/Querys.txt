@@ -1,0 +1,74 @@
+Get All Episodes
+db.series.aggregate([
+{$match: {"nome":"A aventura da ribeira brava"}},
+{$lookup: { from: 'temporada',localField: 'temporadas',foreignField: 'temporada_id',as: 'temporadas'}},
+{$lookup: {from: 'episodios',localField: 'temporadas.temporada_id',foreignField: 'temporada_id',as: 'episodios'}},
+{$project: {temporada_id:0,temporadas:0,_id:0,data:0,'episodios._id':0}}
+]).pretty()
+
+
+
+Get All Seasons Autors
+db.series.aggregate([
+{$match: {"nome":"A aventura da ribeira brava"}},
+{$unwind: { path: '$temporadas'}},
+{$lookup: { from: 'temporada', localField: 'temporadas', foreignField: 'temporada_id',as: 'temporadas'}},
+{$unwind: {  path: '$temporadas',includeArrayIndex: 'temporada'}},
+{$lookup: { from: 'atores', localField: 'temporadas.ators', foreignField: 'ator_id',as: 'atores'}},
+{$group: {_id: '$atores'}}
+]).pretty()
+
+
+
+Get Seasons Count
+db.series.aggregate([
+{$match: {"nome":"A aventura da ribeira brava"}},
+{$unwind: { path: '$temporadas'}},
+{$count: 'temporadas'}
+]).pretty()
+
+
+
+Get Autor Count From a serie
+db.series.aggregate([
+{$match: {"nome":"A aventura da ribeira brava"}},
+{$lookup: { from: 'temporada', localField: 'temporadas',foreignField: 'temporada_id',  as: 'temporadas'}},
+{$unwind: { path: '$temporadas'}},
+{$unwind: {path: '$temporadas.ators'}},
+{$group: { _id: '$temporadas.ators'}},
+{$count: 'Autors'}
+]).pretty()
+
+
+
+Get Autor Series
+db.atores.aggregate([
+{$match: { nome: 'Artur'}},
+{$lookup: {  from: 'temporada',  localField: 'ator_id',  foreignField: 'ators',  as: 'temporadas'}},
+{$unwind:  {    path: '$temporadas',}},
+{$lookup: {  from: 'series',  localField: 'temporadas.temporada_id', foreignField: 'temporadas', as: 'series'}},
+{$unwind: {path: '$series',}},
+{$group: { _id: '$series'}}
+]).pretty()
+
+
+Get Autor Episodes
+db.atores.aggregate([
+{$match: { nome: 'Artur'}},
+{$lookup: { from: 'temporada',  localField: 'ator_id',  foreignField: 'ators',  as: 'temporadas'}},
+{$unwind:  {    path: '$temporadas',}},
+{$lookup: {  from: 'episodios',  localField: 'temporadas.temporada_id',  foreignField: 'temporada_id',  as: 'episodios'}},
+{$unwind: { path: '$episodios',}},
+{$group: { _id: '$episodios'}}
+]).pretty()
+
+
+Get Serie from episode
+db.episodios.aggregate([
+{$match: {  'nome': 'conhecer a Acin'}},
+{$lookup: {  from: 'series',  localField: 'temporada_id',  foreignField: 'temporadas',  as: 'serie'}},
+{$unwind:  { path: '$serie'}},
+{$addFields: {'nome': '$serie.nome'}},
+{$project: {  _id: 0,  temporada_id:0,  num_episodio:0, serie:0}}
+]).pretty()
+

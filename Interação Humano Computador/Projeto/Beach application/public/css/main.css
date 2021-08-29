@@ -1,0 +1,68 @@
+.container {
+  width: 100%;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.bg-blackgrey {
+  background-color: #1d2830;
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color: white;
+  text-transform: uppercase;
+  font-family: Eina 1;
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
+  color: lightgray;
+}
+
+@media (min-width: 576px) {
+  .container-sm,
+  .container {
+    max-width: 100%;
+  }
+}
+
+@media (min-width: 768px) {
+  .container-md,
+  .container-sm,
+  .container {
+    max-width: 100%;
+  }
+}
+
+@media (min-width: 992px) {
+  .container-lg,
+  .container-md,
+  .container-sm,
+  .container {
+    max-width: 100%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container-xl,
+  .container-lg,
+  .container-md,
+  .container-sm,
+  .container {
+    max-width: 100%;
+  }
+}
+
+.dataTables_paginate a {
+  color: black;
+  margin: 5px;
+  padding: 5px;
+  border-radius: 5px;
+  border: grey solid 1px;
+}
+
+.dataTables_paginate a:hover {
+  text-decoration: none;
+  background-color: lightgray;
+}
+
+

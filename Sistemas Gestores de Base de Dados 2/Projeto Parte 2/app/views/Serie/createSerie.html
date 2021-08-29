@@ -1,0 +1,61 @@
+<h2 ng-show="serie._id!=null">Edit Serie</h2>
+<h2 ng-hide="serie._id!=null">Create Serie</h2>
+<hr>
+<h5 style="text-align: center">{{error}}</h5>
+<br>
+<form name="serieForm" ng-submit="saveData(serie)" novalidate class="form-horizontal">
+    <div class="form-group">
+        <label class="col-md-2">Nome</label>
+        <div class="col-md-10">
+            <input type="text" ng-model="serie.nome" name="nome" ng-required="true" class="form-control"/>
+            <p ng-show="serieForm.serie_id.$error.required && (serieForm.$submitted || serieForm.name.$dirty)" class="text-danger">Inser o nome da serie</p>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-md-2">Temporadas</label>
+        <div class="col-md-10">
+            <select ng-model="serie.temporada_id" name="temporada_id" class="form-control" multiple style="width: 100%">
+                <option ng-repeat="x in temporadas" ng-value="x.temporada_id">{{"("+x.temporada_id+") - "+ x.nome  }}</option>
+            </select>
+            <p ng-show="serieForm.temporada_id.$error.required && (serieForm.$submitted)" class="text-danger">Selecione pelo menos um Campo</p>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-md-2">Data</label>
+        <div class="col-md-10">
+            <input type="date" ng-model="serie.data" name="data" ng-required="true" class="form-control"/>
+            <p ng-show="serieForm.data.$error.required && (serieForm.$submitted)" class="text-danger">Insere a data de release da serie</p>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-md-2">Diretores ({{inputs.length}})</label>
+        <div class="col-md-10">
+                <div ng-repeat="item in inputs" style="border: black 2px solid; border-radius: 4px; margin: 15px; display: grid">
+                    <label class="col-md-2">Nome</label>
+                    <input type="text" class="form-control" ng-model="serie.diretores[item.id].nome"\>
+                    <label class="col-md-2">Telefone</label>
+                    <input type="number" class="form-control" ng-model="serie.diretores[item.id].telefone"\>
+                    <label class="col-md-2">Morada</label>
+                    <input type="text" class="form-control" ng-model="serie.diretores[item.id].morada"\>
+                    <input ng-click='removefield(item.id)' value="Remove Diretor" class="btn btn-warning">
+                </div>
+                <br>
+                <input ng-click='addfield()' value="Add Diretor" class="btn btn-success">
+            <p ng-show="serieForm.diretores.$error.required && (serieForm.$submitted)" class="text-danger">Insere pelo menos 1 Diretor</p>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-md-2">Rating</label>
+        <div class="col-md-10">
+            <input type="number" ng-model="serie.rating" name="rating" ng-required="true" class="form-control"/>
+            <p ng-show="serieForm.rating.$error.required && (serieForm.$submitted || serieForm.rating.$dirty)" class="text-danger">Insere um rating a serie.</p>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" value="Update" class="btn btn-primary" ng-show="serie._id!=null"/>
+            <input type="submit" value="Save" class="btn btn-primary" ng-hide="serie._id!=null"/>
+            <a ui-sref="serieList" class="btn btn-warning">Cancel</a>
+        </div>
+    </div>
+</form>

@@ -1,0 +1,25 @@
+<h2>Episodios Listing</h2>
+<br>
+<h5 style="text-align: center">{{error}}</h5>
+<br>
+<table class="table" ng-if="episodios.length>0">
+    <tr style="text-align: center">
+        <th>Nome</th>
+        <th>Temporada</th>
+        <th>Episodio</th>
+        <th>Ações</th>
+    </tr>
+
+    <tr ng-repeat="episodio in episodios" style="text-align: center">
+        <td>{{episodio.nome}}</td>
+        <td>{{episodio.temporada_id}}</td>
+        <td>{{episodio.episodio_numero}}</td>
+        <td>
+            <a ui-sref="episodiosEdit({id:episodio._id})" class="btn btn-primary">Edit</a> |
+            <a ng-click="deleteEpisodio(episodio._id)" class="btn btn-warning">Delete</a>
+        </td>
+    </tr>
+</table>
+<div ng-if="episodios.length==0">
+    Nenhum Episodio Listado!!
+</div>
