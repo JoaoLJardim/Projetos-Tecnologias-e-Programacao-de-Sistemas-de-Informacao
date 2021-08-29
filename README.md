@@ -2,6 +2,8 @@ Projetos executados ao longo dos 2 anos do curso técnico superior profissional 
 
 ![Logo_UMa_site-01](https://user-images.githubusercontent.com/28226571/131232970-acff498b-98c5-4727-af5b-9024f701359d.png)
 
+[Curso - Informação de 28/08/2021](https://www.uma.pt/ensino/ctesp/ctesp-em-tecnologias-e-programacao-de-sistemas-de-informacao/)
+
 # Disciplinas
 
 ## 1º ANO
@@ -43,6 +45,3 @@ Projetos executados ao longo dos 2 anos do curso técnico superior profissional 
 | Disciplinas | Área de Formação      | Conteudo |
 |-------------|-----------------------|----------|
 | Estagio     | Ciências Informáticas |          |
-
-
-[Curso - 28/08/2021](https://www.uma.pt/ensino/ctesp/ctesp-em-tecnologias-e-programacao-de-sistemas-de-informacao/)
