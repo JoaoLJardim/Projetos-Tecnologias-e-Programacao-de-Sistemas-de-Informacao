@@ -38,7 +38,7 @@ Projetos executados ao longo dos 2 anos do curso técnico superior profissional 
 | Sistemas Gestores de Bases de Dados II | Ciências Informáticas | MongoDB e React           |
 | Arquitetura de Dispositivos            | Ciências Informáticas | Java e Raspberry Pi       |
 | Interação Humano-Computador            | Ciências Informáticas |                           |
-| Segurança Informática                  | Ciências Informáticas |                           |
+| Segurança Informática                  | Ciências Informáticas | Segurança                 |
 | Aplicações Centradas em Redes          | Ciências Informáticas | Laravel e Android-Flutter |
 
 ### 2º SEMESTRE
