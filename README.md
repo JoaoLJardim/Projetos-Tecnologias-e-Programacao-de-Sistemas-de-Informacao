@@ -1,5 +1,7 @@
 Projetos executados ao longo dos 2 anos do curso técnico superior profissional em Tecnologias e Programação de Sistemas de Informação na Universidade da Madeira
+
 ### Esta lista de disciplinas são as existentes no periodo de 2019 a 2021, tenha atenção que podera mudar.
+<br>
 
 ![Logo_UMa_site-01](https://user-images.githubusercontent.com/28226571/131232970-acff498b-98c5-4727-af5b-9024f701359d.png)
 
