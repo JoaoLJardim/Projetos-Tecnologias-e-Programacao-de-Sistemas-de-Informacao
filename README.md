@@ -53,8 +53,7 @@ Projetos executados ao longo dos 2 anos do curso técnico superior profissional 
 # Alerta - Readme
 
 ## Português portugal
-Não recomendo, usar este codigo, devido a falta de atualização, onde podera haver alguma falha de segurançã. Use por sua conta e risco. 
-Não utilize este codigo, para template, se poderia recriar o codigo, fazia de outra forma.
+Não recomendo, usar este código, devido à falta de atualização, onde poderá haver algumas falhas de segurança. Use por sua conta e risco. Não utilize este código, para modelo, se poderia recriar o código, fazia de outra forma.
 
 ## English
 I don't recommend using this code, due to lack of update, where there could be some security flaw. Use at your own risk.
