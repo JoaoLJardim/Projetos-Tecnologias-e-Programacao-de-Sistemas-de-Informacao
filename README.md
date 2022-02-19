@@ -48,3 +48,15 @@ Projetos executados ao longo dos 2 anos do curso técnico superior profissional 
 | Disciplinas | Área de Formação      | Conteudo |
 |-------------|-----------------------|----------|
 | Estagio     | Ciências Informáticas |          |
+
+
+# Alerta - Readme
+
+## Português portugal
+Não recomendo, usar este codigo, devido a falta de atualização, onde podera haver alguma falha de segurançã. Use por sua conta e risco. 
+Não utilize este codigo, para template, se poderia recriar o codigo, fazia de outra forma.
+
+## English
+I don't recommend using this code, due to lack of update, where there could be some security flaw. Use at your own risk.
+Do not use this code, for template, if I could recreate the code, I would do otherwise.
+
