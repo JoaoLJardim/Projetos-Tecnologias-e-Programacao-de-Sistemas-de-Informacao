@@ -38,7 +38,7 @@ Projetos executados ao longo dos 2 anos do curso técnico superior profissional 
 
 | Disciplinas                            | Área de Formação      | Conteudo                  |
 |----------------------------------------|-----------------------|---------------------------|
-| Sistemas Gestores de Bases de Dados II | Ciências Informáticas | MongoDB e React           |
+| Sistemas Gestores de Bases de Dados II | Ciências Informáticas | MongoDB e Angular         |
 | Arquitetura de Dispositivos            | Ciências Informáticas | Java e Raspberry Pi       |
 | Interação Humano-Computador            | Ciências Informáticas |                           |
 | Segurança Informática                  | Ciências Informáticas | Segurança                 |
